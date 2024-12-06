@@ -108,25 +108,4 @@ Contents:
 - Regulon AUC scores
 - Cell metadata
 
-## Usage Examples
 
-### Basic Run
-```bash
-python main.py --config config.yaml
-```
-
-### Cell Type-Specific Analysis
-```bash
-# Modify config.yaml:
-preprocessing:
-  cell_type: "DAN"
-  n_top_genes: 2000
-```
-
-### Custom Visualization
-```bash
-# Modify config.yaml:
-visualization:
-  group_by: "Mutation"
-  top_n_regulons: 50
-```
