@@ -1,0 +1,24 @@
+# config.yaml
+paths:
+  input_data: "/path/to/input/data.h5ad"
+  output_dir: "/path/to/output"
+  reference_files:
+    tf_list: "/path/to/allTFs_hg38.txt"
+    motif_rankings: "/path/to/rankings.feather"
+    motif_annotations: "/path/to/motifs.tbl"
+
+preprocessing:
+  cell_type: "DAN"  # Set to null for all cells
+  n_top_genes: 2000
+  target_sum: 10000
+  use_hvg: true
+
+pyscenic:
+  num_workers: 4
+  mask_dropouts: true
+
+visualization:
+  group_by: "Mutation"
+  top_n_regulons: 50
+  umap_neighbors: 10
+  umap_metric: "correlation"
